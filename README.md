@@ -7,5 +7,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. `npm install`
 4. `npm start`
 
-#####You can browse application at http://localhost:3000
+#####You can browse application at <http://localhost:3000>
 
