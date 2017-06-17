@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TextLabel extends Component {
-  render() {
-    return (
-      <h3> Count : {this.props.count} </h3>
-    );
-  }
+function TextLabel(count) {
+  return (
+      <h3> Count : {count} </h3>
+  );
 }
 
 export default TextLabel;

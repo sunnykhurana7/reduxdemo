@@ -7,6 +7,11 @@ import logo from '../logo.svg';
 import '../App.css';
 
 class Counter extends Component {
+
+  constructor() {
+    super();
+  }
+
   handleIncrement = () => {
     const { increment } = this.props
     increment()
@@ -22,10 +27,10 @@ class Counter extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Simple React-Redux Counter</h2>
         </div>
-        <Button clickHandler={this.handleIncrement} buttonText="Increment"/>
-        <TextLabel count={this.props.count}/>
-        <Button clickHandler={this.handleDecrement} buttonText="Decrement"/>
-      </div>
+        <Button clickHandler={this.handleIncrement.bind(this)} buttonText="Increment"/>
+        { TextLabel(this.props.count) }
+        <Button clickHandler={this.handleDecrement.bind(this)} buttonText="Decrement"/>
+    </div>
     );
   }
 }
