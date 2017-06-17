@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Steps to run application 
 
-1. `git clone git@github.com:amitdubey37/react-redux-counter.git`
+1. `git clone git@github.com:mayurgupta1991/react-redux-counter.git`
 2. `cd react-redux-counter`
 3. `npm install`
 4. `npm start`
