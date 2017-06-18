@@ -1,15 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component,  } from 'react';
 import Button from '../components/Button'
 import TextLabel from '../components/TextLabel'
 import {connect} from 'react-redux'
 import {increment, decrement} from '../actions'
 import logo from '../logo.svg';
 import '../App.css';
+import UserInput from '../components/UserInput'
 
 class Counter extends Component {
 
   constructor() {
     super();
+    this.state = {
+      username:''
+    }
+  }
+
+  getValue(username) {
+    this.setState({
+        username:username
+    })
   }
 
   handleIncrement = () => {
@@ -21,6 +31,7 @@ class Counter extends Component {
     decrement()
   }
   render() {
+    console.log("gjhgj",this)
     return (
       <div className="App">
         <div className="App-header">
@@ -30,6 +41,11 @@ class Counter extends Component {
         <Button clickHandler={this.handleIncrement.bind(this)} buttonText="Increment"/>
         { TextLabel(this.props.count) }
         <Button clickHandler={this.handleDecrement.bind(this)} buttonText="Decrement"/>
+
+
+
+
+
     </div>
     );
   }
